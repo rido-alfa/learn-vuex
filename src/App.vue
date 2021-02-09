@@ -1,11 +1,13 @@
 <template>
-    <div>
-        <h1 class="bg-red-200">Hello world</h1>
+    <div class="m-auto max-w-5xl overflow-auto p-2">
+        <Todos />
     </div>
 </template>
 
 <script>
+import Todos from './components/todos/Todos'
 export default {
-    name: "App"
+	name: "App",
+	components: {Todos}
 };
 </script>
