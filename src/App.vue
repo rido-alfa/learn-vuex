@@ -1,13 +1,14 @@
 <template>
+    <Navbar />
     <div class="m-auto max-w-5xl overflow-auto p-2">
-        <Todos />
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-import Todos from './components/todos/Todos'
+import Navbar from "./components/Navbar";
 export default {
-	name: "App",
-	components: {Todos}
+    name: "App",
+    components: { Navbar }
 };
 </script>

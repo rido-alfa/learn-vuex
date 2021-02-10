@@ -1,28 +1,30 @@
 <template>
     <div>
-        <h1 class="text-xl mb-4 text-gray-700">Todos</h1>
-        <div>
-            <AddTodo />
-        </div>
-        <div class="my-5">
-            <FilterTodos />
+        <h1 class="text-2xl font-medium mb-4 text-gray-800">Todos</h1>
+        <div class="flex justify-between mb-5 items-center">
+            <div>
+                <AddTodo />
+            </div>
+            <div>
+                <FilterTodos />
+            </div>
         </div>
         <div class="w-full flex justify-between">
-            <span>Double click to mark as completed</span>
-            <span>
-                <span class="w-4 h-4 px-2 bg-red-500 rounded mr-2"></span> = Incompleted
+            <span class="text-gray-800">Double click to mark as completed</span>
+            <span class="text-gray-800">
+                <span class="w-4 h-4 px-2 bg-gray-500 rounded mr-2 shadow"></span> = Incompleted
             </span>
-            <span>
-                <span class="w-4 h-4 px-2 bg-green-500 rounded mr-2"></span> = Completed
+            <span class="text-gray-800">
+                <span class="w-4 h-4 px-2 bg-white rounded mr-2 shadow"></span> = Completed
             </span>
         </div>
         <div class="grid grid-cols-3 gap-2 my-3">
             <div
-                class="px-4 py-2 rounded text-white text-center flex items-center justify-between"
+                class="px-4 py-2 rounded shadow text-white text-center flex items-center justify-between"
                 @dblclick="updateTodo(item)"
                 v-for="item in getAllTodos"
                 :key="item.id"
-                :class="item.completed == false ? 'bg-red-500' : 'bg-green-500 ' "
+                :class="item.completed == false ? 'bg-gray-500' : 'bg-white text-gray-800' "
             >
                 <div>{{ item.title }}</div>
                 <div>
