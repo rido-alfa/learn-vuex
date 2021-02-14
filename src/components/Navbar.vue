@@ -8,6 +8,7 @@
                 <router-link to="/" class="text-gray-100 hover:text-white">Todos</router-link>
                 <router-link to="/agenda" class="text-gray-100 hover:text-white">Agenda</router-link>
                 <router-link to="/donasi" class="text-gray-100 hover:text-white">Donasi</router-link>
+                <router-link to="/counter" class="text-gray-100 hover:text-white">Counter</router-link>
             </div>
         </div>
     </div>
